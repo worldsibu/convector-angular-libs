@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "@worldsibu/convector-rest-api-angular-adapter": {
+      "root": "projects/worldsibu/convector-rest-api-angular-adapter",
+      "sourceRoot": "projects/worldsibu/convector-rest-api-angular-adapter/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/worldsibu/convector-rest-api-angular-adapter/tsconfig.lib.json",
+            "project": "projects/worldsibu/convector-rest-api-angular-adapter/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/worldsibu/convector-rest-api-angular-adapter/src/test.ts",
+            "tsConfig": "projects/worldsibu/convector-rest-api-angular-adapter/tsconfig.spec.json",
+            "karmaConfig": "projects/worldsibu/convector-rest-api-angular-adapter/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/worldsibu/convector-rest-api-angular-adapter/tsconfig.lib.json",
+              "projects/worldsibu/convector-rest-api-angular-adapter/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "convector-angular-libs"

@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@worldsibu/convector-rest-api-angular-adapter": [
+        "dist/worldsibu/convector-rest-api-angular-adapter"
+      ],
+      "@worldsibu/convector-rest-api-angular-adapter/*": [
+        "dist/worldsibu/convector-rest-api-angular-adapter/*"
+      ]
+    }
   }
 }
